@@ -1,0 +1,7 @@
+[16424:10660:0301/221613.277:WARNING:chrome_main_delegate.cc(617)] This is Chrome version 110.0.5481.178 (not a warning)
+[16424:10660:0301/221616.804:ERROR:device_event_log_impl.cc(218)] [22:16:16.805] USB: usb_service_win.cc:415 Could not read device interface GUIDs: The system cannot find the file specified. (0x2)
+[16424:10660:0301/221616.806:ERROR:device_event_log_impl.cc(218)] [22:16:16.806] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[16424:10660:0301/221616.807:ERROR:device_event_log_impl.cc(218)] [22:16:16.807] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[16424:10660:0301/221616.810:ERROR:device_event_log_impl.cc(218)] [22:16:16.810] USB: usb_device_handle_win.cc:1046 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[16424:10660:0301/221625.073:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: http://the-internet.herokuapp.com/login (0)
+[16424:10660:0301/221627.322:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
