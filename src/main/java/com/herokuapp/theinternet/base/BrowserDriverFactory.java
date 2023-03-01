@@ -48,6 +48,7 @@ public class BrowserDriverFactory {
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("user-data-dir="+System.getProperty("user.dir") + "//src//main//resources//Profiles//" + profile);
 
+
 		//Create driver object for Chrome
 		driver = new ChromeDriver(chromeOptions);
 
