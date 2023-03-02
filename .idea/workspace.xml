@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/phantomjsdriver.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/phantomjs.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuiteMobile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230302/DropdownTestSuite/DropdownTests-PH/optionTwoTest/195750225 optionTwoTest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230302/DropdownTestSuite/DropdownTests-PH/optionTwoTest/200058378 optionTwoTest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/dropdowntests/DropdownTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/dropdowntests/DropdownTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/FullUITestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/FullUITestSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuite.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,23 +52,36 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/java/selenium_tutorial_project/src/main/resources/Profiles/ChromeProfile",
+    "last_opened_file_path": "C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\java\selenium_tutorial_project\src\test\resources\TestSuites\SeparateTestSuites" />
       <recent name="C:\java\selenium_tutorial_project\src\main\resources\Profiles\ChromeProfile" />
       <recent name="C:\java\selenium_tutorial_project\src\test\resources\TestSuites" />
       <recent name="C:\java\selenium_tutorial_project\src\main\java\com\herokuapp\theinternet\pages" />
       <recent name="C:\java\selenium_tutorial_project\src\test\resources" />
-      <recent name="C:\java\selenium_tutorial_project\src\test\java\com\herokuapp\theinternet\loginpagetests" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.herokuapp.theinternet.checkboxespagetests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml">
+  <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuiteMobile.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_tutorial_project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuiteMobile.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
@@ -66,9 +92,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -107,37 +133,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckboxesTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_tutorial_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.herokuapp.theinternet.checkboxespagetests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet.checkboxespagetests" />
-      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.checkboxespagetests.CheckboxesTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuiteMobile.xml" />
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
-      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SmokeTestSuite.xml" />
-      <item itemvalue="TestNG.CheckboxesTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuiteMobile.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SmokeTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
-        <item itemvalue="TestNG.CheckboxesTests" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +182,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Selenium-Udemy-Tutorial" />
+    </ignored-roots>
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
