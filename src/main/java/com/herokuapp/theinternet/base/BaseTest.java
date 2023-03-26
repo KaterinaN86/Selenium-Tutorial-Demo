@@ -12,14 +12,18 @@ import java.lang.reflect.Method;
 public class BaseTest {
 
     protected static String testSuiteName;
+
     protected WebDriver driver;
+
     protected Logger log;
+
+
     protected String testName;
     protected String testMethodName;
 
-    @Parameters({"browser", "chromeProfile", "deviceName"})
+    @Parameters({"browser", "chromeProfile", "deviceName", "remoteFirefox", "environment"})
     @BeforeMethod(alwaysRun = true)
-    public void setUp(Method method, @Optional("chrome") String browser, @Optional String profile, @Optional String deviceName, ITestContext ctx) {
+    public void setUp(Method method, @Optional("chrome") String browser, @Optional String profile, @Optional String deviceName, @Optional String remoteFirefox, @Optional String environment, ITestContext ctx) {
         String testName = ctx.getCurrentXmlTest().getName();
         log = LogManager.getLogger(testName);
         BrowserDriverFactory factory = new BrowserDriverFactory(browser, log);
@@ -27,19 +31,16 @@ public class BaseTest {
             driver = factory.createChromeWithProfile(profile);
         } else if (deviceName != null) {
             driver = factory.createChromeWithMobileEmulation(deviceName);
+        } else if (remoteFirefox != null) {
+            driver = factory.createRemoteFirefox();
+        } else if (environment != null && environment.equals("grid")) {
+            driver = factory.createDriverGrid();
         } else {
             driver = factory.createDriver();
         }
         ctx.setAttribute("driver", driver);
-
-        // This sleep here is for instructor only. Students don't need this here
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         driver.manage().window().maximize();
+        setCurrentThreadName();
         this.testSuiteName = ctx.getSuite().getName();
         this.testName = testName;
         this.testMethodName = method.getName();
@@ -52,5 +53,18 @@ public class BaseTest {
 
         driver.quit();
     }
+
+    /**
+     * Sets thread name which includes thread id
+     */
+    private void setCurrentThreadName() {
+        Thread thread = Thread.currentThread();
+        String threadName = thread.getName();
+        String threadId = String.valueOf(thread.getId());
+        if (!threadName.contains(threadId)) {
+            thread.setName(threadName + " " + threadId);
+        }
+    }
+
 
 }

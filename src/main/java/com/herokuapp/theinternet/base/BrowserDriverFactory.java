@@ -6,6 +6,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -13,12 +14,16 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 public class BrowserDriverFactory {
 
+    ChromeOptions chromeOptions;
     private WebDriver driver;
     private String browser;
     private Logger log;
@@ -26,6 +31,7 @@ public class BrowserDriverFactory {
     public BrowserDriverFactory(String browser, Logger log) {
         this.browser = browser.toLowerCase();
         this.log = log;
+        this.chromeOptions = new ChromeOptions();
     }
 
     public WebDriver createDriver() {
@@ -35,16 +41,19 @@ public class BrowserDriverFactory {
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                //After Chrome browser 1.1.0 and ChromeDriver update there is forbidden access issue.
+                //Adding this argument to the options object is necessary for chromeDriver to work.
+                chromeOptions.addArguments("--remote-allow-origins=*");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
+                //WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
             case "chromeheadless":
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefoxheadless":
@@ -57,15 +66,11 @@ public class BrowserDriverFactory {
                 break;
             case "phantomjs":
                 Capabilities caps = new DesiredCapabilities();
-
                 ((DesiredCapabilities) caps).setJavascriptEnabled(true);
-
                 ((DesiredCapabilities) caps).setCapability("takesScreenshot", true);
-
                 ((DesiredCapabilities) caps).setCapability(
                         PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                        "src/main/resources/phantomjs.exe"
-                );
+                        "src/main/resources/phantomjs.exe");
                 //********
                 //System.setProperty("phantomjs.binary.path", "src/main/resources/phantomjs.exe");
                 ThreadLocal<WebDriver> phantomDriver = new ThreadLocal<WebDriver>();
@@ -79,10 +84,10 @@ public class BrowserDriverFactory {
             default:
                 System.out.println("Do not know how to start: " + browser + ", starting chrome.");
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                chromeOptions.addArguments("--remote-allow-origins=*");
+                driver = new ChromeDriver(chromeOptions);
                 break;
         }
-        
         return driver;
     }
 
@@ -90,6 +95,7 @@ public class BrowserDriverFactory {
         log.info("Starting chrome driver with profile: " + profile);
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("user-data-dir=" + System.getProperty("user.dir") + "//src//main//resources//Profiles//" + profile);
+        chromeOptions.addArguments("--remote-allow-origins=*");
         //Create driver object for Chrome
         driver = new ChromeDriver(chromeOptions);
         return driver;
@@ -101,8 +107,54 @@ public class BrowserDriverFactory {
         mobileEmulation.put("deviceName", deviceName);
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+        chromeOptions.addArguments("--remote-allow-origins=*");
         //Create driver object for Chrome
         driver = new ChromeDriver(chromeOptions);
+        return driver;
+    }
+
+    public WebDriver createRemoteFirefox() {
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        WebDriver driver = new RemoteWebDriver(firefoxOptions);
+        return driver;
+    }
+
+    public WebDriver createDriverGrid() {
+        String hubUrl = "http://40.114.204.255:4444/wd/hub";
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName", browser);
+        System.out.println("Starting " + browser + " on grid");
+        // Creating driver
+        if (browser.equals("chrome")) {
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--remote-allow-origins=*");
+            chromeOptions.merge(capabilities);
+            try {
+                driver = new RemoteWebDriver(new URL(hubUrl), chromeOptions);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (browser.equals("MicrosoftEdge")) {
+            WebDriverManager.edgedriver().setup();
+            EdgeOptions options = new EdgeOptions();
+            options.setCapability("platform", "LINUX");
+            options.setCapability("browserVersion", "110.0");
+            capabilities.setCapability("maxInstances","1");
+            options.merge(capabilities);
+            try {
+                driver = new RemoteWebDriver(new URL(hubUrl), options);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            try {
+                driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
         return driver;
     }
 }
