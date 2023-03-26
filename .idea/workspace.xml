@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +62,7 @@
       <recent name="com.herokuapp.theinternet.checkboxespagetests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml">
     <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
@@ -121,8 +122,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/KeyPressesTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
