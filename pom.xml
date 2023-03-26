@@ -68,12 +68,6 @@
             <artifactId>htmlunit-driver</artifactId>
             <version>4.8.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>3.3</version>
-            <type>maven-plugin</type>
-        </dependency>
     </dependencies>
 <build>
     <plugins>
@@ -98,15 +92,14 @@
 
         </plugin>
         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>attach-descriptor</id>
-                    <goals>
-                        <goal>attach-descriptor</goal>
-                    </goals>
-                </execution>
-            </executions>
+            <version>3.7.1</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>3.0.0</version>
         </plugin>
     </plugins>
 </build>
