@@ -120,7 +120,7 @@ public class BrowserDriverFactory {
     }
 
     public WebDriver createDriverGrid() {
-        String hubUrl = "http://172.17.0.2:4444/wd/hub";
+        String hubUrl = "http://192.168.1.103:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
         System.out.println("Starting " + browser + " on grid");
