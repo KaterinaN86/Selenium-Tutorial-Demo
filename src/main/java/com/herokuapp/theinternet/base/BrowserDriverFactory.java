@@ -120,7 +120,7 @@ public class BrowserDriverFactory {
     }
 
     public WebDriver createDriverGrid() {
-        String hubUrl = "http://40.114.204.255:4444/wd/hub";
+        String hubUrl = "http://192.168.1.103:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
         System.out.println("Starting " + browser + " on grid");
@@ -135,11 +135,11 @@ public class BrowserDriverFactory {
                 e.printStackTrace();
             }
         }
-        else if (browser.equals("MicrosoftEdge")) {
+        else if (browser.equals("microsoftedge")) {
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
             options.setCapability("platform", "LINUX");
-            options.setCapability("browserVersion", "110.0");
+            options.setCapability("browserVersion", "111.0");
             capabilities.setCapability("maxInstances","1");
             options.merge(capabilities);
             try {

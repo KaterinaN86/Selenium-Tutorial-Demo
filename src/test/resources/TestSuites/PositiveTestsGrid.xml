@@ -5,25 +5,25 @@
     <!-- <parameter name="environment" value="local"></parameter> -->
     <parameter name="environment" value="grid"></parameter>
 
-    <test name="PositiveTest-CH">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="com.herokuapp.theinternet.PositiveTests" />
-        </classes>
-    </test>
-
-    <test name="PositiveTest-FF">
-        <parameter name="browser" value="firefox"></parameter>
-        <classes>
-            <class name="com.herokuapp.theinternet.PositiveTests" />
-        </classes>
-    </test>
-
-<!--    <test name="PositiveTest-MSED">-->
-<!--        <parameter name="browser" value="MicrosoftEdge"></parameter>-->
+<!--    <test name="PositiveTest-CH">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
 <!--        <classes>-->
 <!--            <class name="com.herokuapp.theinternet.PositiveTests" />-->
 <!--        </classes>-->
 <!--    </test>-->
+
+<!--    <test name="PositiveTest-FF">-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.herokuapp.theinternet.PositiveTests" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="PositiveTest-MSED">
+        <parameter name="browser" value="microsoftedge"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.PositiveTests" />
+        </classes>
+    </test>
 
 </suite>

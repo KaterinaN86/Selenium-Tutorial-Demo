@@ -6,6 +6,51 @@
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/data_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/data_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/data_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/data_3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/data_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Cache/Cache_Data/f_00000b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/5b90857a79a2da80_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/5b90857a79a2da80_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/87d9b5eb7c621dd6_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/87d9b5eb7c621dd6_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/975b533cfc1a549e_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/975b533cfc1a549e_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/c4bbae17a4434ed1_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/c4bbae17a4434ed1_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/d382768421dd2179_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/d382768421dd2179_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Code Cache/js/index-dir/the-real-index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Extension State/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Extension State/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Extension State/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Extension State/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/History" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/History" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Local Storage/leveldb/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Local Storage/leveldb/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Local Storage/leveldb/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/Cookies" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/Cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/Network Persistent State" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/Network Persistent State" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/Reporting and NEL" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/Reporting and NEL" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/TransportSecurity" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Network/TransportSecurity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Preferences" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Preferences" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Session Storage/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Session Storage/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Session Storage/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Session Storage/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Session Storage/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Session Storage/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Sessions/Session_13322178975956644" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Sessions/Tabs_13322178987146925" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Site Characteristics Database/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Site Characteristics Database/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Site Characteristics Database/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Site Characteristics Database/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Sync Data/LevelDB/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Sync Data/LevelDB/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Sync Data/LevelDB/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Sync Data/LevelDB/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Web Data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/Web Data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/metadata/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/metadata/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/metadata/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/metadata/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/metadata/LOG.old" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Default/shared_proto_db/metadata/LOG.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/DevToolsActivePort" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/DevToolsActivePort" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/GrShaderCache/data_0" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/GrShaderCache/data_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/GrShaderCache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/GrShaderCache/data_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/GrShaderCache/data_3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/GrShaderCache/data_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Last Version" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Last Version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Local State" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/Local State" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/chrome_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/chrome_debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/chrome_shutdown_ms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Profiles/ChromeProfile/chrome_shutdown_ms.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +107,16 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/FullUITestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_tutorial_project" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/FullUITestSuite.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
@@ -72,9 +127,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -82,9 +137,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -92,20 +147,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/KeyPressesTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/KeyPressesTestSuite.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_tutorial_project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
@@ -113,19 +158,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.&lt;default&gt;" />
-      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
-      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/KeyPressesTestSuite.xml" />
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/FullUITestSuite.xml" />
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" />
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
-      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/KeyPressesTestSuite.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/JSErrorTestSuite.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/DropdownTestSuiteHeadless.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/FullUITestSuite.xml" />
       </list>
     </recent_temporary>
   </component>
