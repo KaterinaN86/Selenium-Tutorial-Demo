@@ -1,6 +1,7 @@
 package com.herokuapp.theinternet.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import jdk.jpackage.internal.Log;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +44,7 @@ public class BrowserDriverFactory {
                 WebDriverManager.chromedriver().setup();
                 //After Chrome browser 1.1.0 and ChromeDriver update there is forbidden access issue.
                 //Adding this argument to the options object is necessary for chromeDriver to work.
-                chromeOptions.addArguments("--remote-allow-origins=*");
+
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
@@ -119,11 +120,17 @@ public class BrowserDriverFactory {
         return driver;
     }
 
+    /**
+     * Method used for creating RemoteWebDriver instance used for performing tests on SeleniumGrid. Depending on browser variable value certain instance is created with corresponding capabilities and options.
+     *
+     * @return WebDriver instance
+     */
     public WebDriver createDriverGrid() {
-        String hubUrl = "http://192.168.1.103:4444/wd/hub";
+        //Defining URL of SeleniumGrid hub used for Firefox and Chrome nodes.
+        String hubUrl = "http://40.114.204.255:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
-        System.out.println("Starting " + browser + " on grid");
+        Log.info("Starting \" + browser + \" on grid");
         // Creating driver
         if (browser.equals("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
@@ -134,21 +141,22 @@ public class BrowserDriverFactory {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-        }
-        else if (browser.equals("microsoftedge")) {
+        } else if (browser.equals("microsoftedge")) {
+            //Edge browser could not be started as part of Selenium Grid for other browsers so separate grid form standalone docker image is created. Value of hubURL variable corresponds to edge standalone IP.
+            hubUrl = "http://192.168.1.107:4444/wd/hub";
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
+            //Following capabilities will vary depending on configuration of machine where SeleniumGrid is running.
             options.setCapability("platform", "LINUX");
             options.setCapability("browserVersion", "111.0");
-            capabilities.setCapability("maxInstances","1");
+            capabilities.setCapability("maxInstances", "1");
             options.merge(capabilities);
             try {
                 driver = new RemoteWebDriver(new URL(hubUrl), options);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-        }
-        else {
+        } else {
             try {
                 driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
             } catch (MalformedURLException e) {

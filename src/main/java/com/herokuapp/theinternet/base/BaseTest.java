@@ -10,14 +10,9 @@ import java.lang.reflect.Method;
 
 @Listeners({com.herokuapp.theinternet.base.TestListener.class})
 public class BaseTest {
-
     protected static String testSuiteName;
-
     protected WebDriver driver;
-
     protected Logger log;
-
-
     protected String testName;
     protected String testMethodName;
 
@@ -50,7 +45,6 @@ public class BaseTest {
     public void tearDown() {
         log.info("Close driver");
         // Close browser
-
         driver.quit();
     }
 
@@ -65,6 +59,4 @@ public class BaseTest {
             thread.setName(threadName + " " + threadId);
         }
     }
-
-
 }

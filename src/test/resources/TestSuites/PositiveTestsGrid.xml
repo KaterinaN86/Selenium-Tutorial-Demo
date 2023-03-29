@@ -1,29 +1,31 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="PositiveTestSuite" verbose="1" parallel="tests" thread-count="2">
+<suite name="PositiveTestSuite" verbose="1" parallel="tests" thread-count="4">
 
+    <!-- when environment parameter value is set to "local" WebDriverManager instance is used to create driver for running tests !-->
     <!-- <parameter name="environment" value="local"></parameter> -->
+    <!-- when environment parameter value is set to "grid" WebDriverManager instance is used to create driver for running tests !-->
     <parameter name="environment" value="grid"></parameter>
-
+    <!-- Test for "chrome" browser -->
     <test name="PositiveTest-CH">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="com.herokuapp.theinternet.PositiveTests" />
+            <class name="com.herokuapp.theinternet.PositiveTests"/>
         </classes>
     </test>
-
-<!--    <test name="PositiveTest-FF">-->
-<!--        <parameter name="browser" value="firefox"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="com.herokuapp.theinternet.PositiveTests" />-->
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    <test name="PositiveTest-MSED">-->
-<!--        <parameter name="browser" value="microsoftedge"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="com.herokuapp.theinternet.PositiveTests" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!-- Test for "firefox" browser -->
+    <test name="PositiveTest-FF">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.PositiveTests"/>
+        </classes>
+    </test>
+    <!-- Test for "edge" browser -->
+    <test name="PositiveTest-MSED">
+        <parameter name="browser" value="microsoftedge"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.PositiveTests"/>
+        </classes>
+    </test>
 
 </suite>
