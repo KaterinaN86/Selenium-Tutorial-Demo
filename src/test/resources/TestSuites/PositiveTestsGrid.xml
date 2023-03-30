@@ -20,12 +20,12 @@
             <class name="com.herokuapp.theinternet.PositiveTests"/>
         </classes>
     </test>
-<!--    &lt;!&ndash; Test for "edge" browser &ndash;&gt;-->
-<!--    <test name="PositiveTest-MSED">-->
-<!--        <parameter name="browser" value="microsoftedge"></parameter>-->
-<!--        <classes>-->
-<!--            <class name="com.herokuapp.theinternet.PositiveTests"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!-- Test for "edge" browser -->
+    <test name="PositiveTest-MSED">
+        <parameter name="browser" value="microsoftedge"></parameter>
+        <classes>
+            <class name="com.herokuapp.theinternet.PositiveTests"/>
+        </classes>
+    </test>
 
 </suite>
