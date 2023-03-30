@@ -148,7 +148,7 @@ public class BrowserDriverFactory {
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
             //Following capabilities will vary depending on configuration of machine where SeleniumGrid is running.
-            options.setCapability("platform", "LINUX");
+            options.setCapability("platform", "Linux");
             options.setCapability("browserVersion", "111.0");
             capabilities.setCapability("maxInstances", "1");
             options.merge(capabilities);
