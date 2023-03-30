@@ -1,7 +1,6 @@
 package com.herokuapp.theinternet.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import jdk.jpackage.internal.Log;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +14,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
@@ -44,7 +44,7 @@ public class BrowserDriverFactory {
                 WebDriverManager.chromedriver().setup();
                 //After Chrome browser 1.1.0 and ChromeDriver update there is forbidden access issue.
                 //Adding this argument to the options object is necessary for chromeDriver to work.
-
+                chromeOptions.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
@@ -130,7 +130,7 @@ public class BrowserDriverFactory {
         String hubUrl = "http://40.114.204.255:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
-        Log.info("Starting \" + browser + \" on grid");
+        log.info("Starting \" + browser + \" on grid");
         // Creating driver
         if (browser.equals("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
@@ -163,6 +163,7 @@ public class BrowserDriverFactory {
                 e.printStackTrace();
             }
         }
+        ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
         return driver;
     }
 }

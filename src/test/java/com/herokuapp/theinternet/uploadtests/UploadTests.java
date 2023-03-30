@@ -1,10 +1,9 @@
 package com.herokuapp.theinternet.uploadtests;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.FileUploaderPage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class UploadTests extends TestUtilities {
     @Test(dataProvider = "files")

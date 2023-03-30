@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/TestAuthentication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/JSErrorTestSuite/JSErrorTests/jsErrorTest/220215076 jsErrorTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/JSErrorTests/jsErrorTest/215907909 jsErrorTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215830339 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215831229 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215832163 SecureAreaPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/FullUITestSuite/PositiveLogInTest-CH/logInTest/155728150 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/FullUITestSuite/PositiveLogInTest-CH/logInTest/155731563 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/FullUITestSuite/PositiveLogInTest-CH/logInTest/155734348 SecureAreaPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WPr/logInTest/155859488 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WPr/logInTest/155900582 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WPr/logInTest/155901489 SecureAreaPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WoPr/logInTest/155907322 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WoPr/logInTest/155908149 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WoPr/logInTest/155909210 SecureAreaPage opened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/TestUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/TestUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/PositiveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/PositiveTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/uploadtests/UploadTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/uploadtests/UploadTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +66,7 @@
       <recent name="com.herokuapp.theinternet.checkboxespagetests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml">
+  <component name="RunManager" selected="TestNG.PositiveTests">
     <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/FullUITestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/FullUITestSuite.xml" />
@@ -99,16 +87,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium_tutorial_project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
@@ -119,9 +97,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/UploadTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/UploadTestSuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -129,20 +107,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PositiveTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium_tutorial_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.herokuapp.theinternet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.herokuapp.theinternet" />
+      <option name="MAIN_CLASS_NAME" value="com.herokuapp.theinternet.PositiveTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="TestNG.PositiveTests" />
+      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/UploadTestSuite.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/FullUITestSuite.xml" />
-      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
-      <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
       <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/AletrsTestSuite.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/PositiveLogInTestSuite.xml" />
+        <item itemvalue="TestNG.PositiveTests" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/FullUITestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/UploadTestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/CheckboxesTestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/PositiveTestsGrid.xml" />
       </list>
     </recent_temporary>
   </component>

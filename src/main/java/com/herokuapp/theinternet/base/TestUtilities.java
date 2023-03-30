@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 public class TestUtilities extends BaseTest {
-
+    //Data provider for files upload test.
     @DataProvider(name = "files")
     protected static Object[][] files() {
         return new Object[][]{
@@ -43,15 +43,19 @@ public class TestUtilities extends BaseTest {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String path = System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "screenshots" + File.separator + getTodaysDate() + File.separator + testSuiteName + File.separator + testName + File.separator + testMethodName + File.separator + getSystemTime() + " " + fileName + ".png";
         try {
-            FileUtils.copyFile(scrFile,new File(path));
+            FileUtils.copyFile(scrFile, new File(path));
         } catch (IOException e) {
             System.err.println("Screenshot file copy failed!");
         }
     }
-    /** Get logs from browser console */
+
+    /**
+     * Get logs from browser console
+     */
     protected List<LogEntry> getBrowserLogs() {
         LogEntries log = driver.manage().logs().get("browser");
         List<LogEntry> logList = log.getAll();
         return logList;
     }
+
 }
