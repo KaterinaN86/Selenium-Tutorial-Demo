@@ -143,7 +143,8 @@ public class BrowserDriverFactory {
             }
         } else if (browser.equals("microsoftedge")) {
             //Edge browser could not be started as part of Selenium Grid for other browsers so separate grid form standalone docker image is created. Value of hubURL variable corresponds to edge standalone IP.
-            hubUrl = "http://192.168.1.109:4444/wd/hub";
+            //hubUrl = "http://192.168.1.109:4444/wd/hub";
+            hubUrl = "http://192.168.1.109:5555/wd/hub";
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
             //Following capabilities will vary depending on configuration of machine where SeleniumGrid is running.
