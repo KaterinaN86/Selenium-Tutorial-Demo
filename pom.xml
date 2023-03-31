@@ -12,7 +12,11 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <suiteXMLFile>CheckboxesTestSuite.xml</suiteXMLFile>
+        <!-- Specifying Default suite files if not being specified from mvn command line -->
+        <smokeSuiteFile>src\test\resources\TestSuites\SeparateTestSuites\DragAndDropTestSuite.xml</smokeSuiteFile>
+        <!-- Default suite files if not being specified from mvn command line -->
+        <defaultSuiteFiles>${smokeSuiteFile}</defaultSuiteFiles>
+        <suiteFile>${defaultSuiteFiles}</suiteFile>
     </properties>
 
     <dependencies>
@@ -96,9 +100,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
+                    <reuseForks>false</reuseForks>
+                    <forkCount>1</forkCount>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXMLFile}</suiteXmlFile>
+                        <suiteXmlFile>${suiteFile}</suiteXmlFile>
                     </suiteXmlFiles>
+
                 </configuration>
             </plugin>
             <plugin>
