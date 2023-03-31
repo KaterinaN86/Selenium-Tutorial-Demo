@@ -16,9 +16,9 @@ public class BaseTest {
     protected String testName;
     protected String testMethodName;
 
-    @Parameters({"browser", "chromeProfile", "deviceName", "remoteFirefox", "environment"})
+    @Parameters({"browser", "chromeProfile", "deviceName", "remoteFirefox", "environment", "ip", "enableFileUpload"})
     @BeforeMethod(alwaysRun = true)
-    public void setUp(Method method, @Optional("chrome") String browser, @Optional String profile, @Optional String deviceName, @Optional String remoteFirefox, @Optional String environment, ITestContext ctx) {
+    public void setUp(Method method, @Optional("chrome") String browser, @Optional String profile, @Optional String deviceName, @Optional String remoteFirefox, @Optional String environment, @Optional String ip, @Optional String enableFileUpload, ITestContext ctx) {
         String testName = ctx.getCurrentXmlTest().getName();
         log = LogManager.getLogger(testName);
         BrowserDriverFactory factory = new BrowserDriverFactory(browser, log);
@@ -28,8 +28,11 @@ public class BaseTest {
             driver = factory.createChromeWithMobileEmulation(deviceName);
         } else if (remoteFirefox != null) {
             driver = factory.createRemoteFirefox();
-        } else if (environment != null && environment.equals("grid")) {
-            driver = factory.createDriverGrid();
+        } else if ((environment != null) && (environment.equals("grid"))) {
+            if(enableFileUpload==null){
+                enableFileUpload="false";
+            }
+            driver = factory.createDriverGrid(enableFileUpload, ip);
         } else {
             driver = factory.createDriver();
         }

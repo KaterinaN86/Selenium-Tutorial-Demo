@@ -13,7 +13,6 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <suiteXMLFile>src/main/resources/testng.xml</suiteXMLFile>
-        <environment>local</environment>
     </properties>
 
     <dependencies>
@@ -97,13 +96,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+                    <!--                    <testFailureIgnore>true</testFailureIgnore>-->
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXMLFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <environment>${environment}</environment>
-                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>

@@ -2,18 +2,20 @@ package com.herokuapp.theinternet.uploadtests;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.FileUploaderPage;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class UploadTests extends TestUtilities {
+
     @Test(dataProvider = "files")
     public void fileUploadTest(int no, String fileName) {
         log.info("Starting file upload test # " + no + " for " + fileName + " file.");
-
         // open File Uploader Page
         FileUploaderPage fileUploaderPage = new FileUploaderPage(driver, log);
         fileUploaderPage.openPage();
-
         // Select file
         fileUploaderPage.selectFile(fileName);
 

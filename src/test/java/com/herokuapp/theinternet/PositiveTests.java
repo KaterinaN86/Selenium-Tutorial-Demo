@@ -1,13 +1,12 @@
 package com.herokuapp.theinternet;
 
-import com.herokuapp.theinternet.base.BaseTest;
 import com.herokuapp.theinternet.base.TestUtilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PositiveTests extends BaseTest {
+public class PositiveTests extends TestUtilities {
     @Test
     public void logInTest() {
         // open the page
