@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/GridUploadTestSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/pages/FileUploaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/pages/FileUploaderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/PositiveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/PositiveTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/uploadtests/UploadTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/uploadtests/UploadTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/PositiveTestsGrid.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/JSErrorTestSuite/JSErrorTests/jsErrorTest/220215076 jsErrorTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/JSErrorTests/jsErrorTest/215907909 jsErrorTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215830339 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215831229 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215832163 SecureAreaPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/FullUITestSuite/PositiveLogInTest-CH/logInTest/155728150 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/FullUITestSuite/PositiveLogInTest-CH/logInTest/155731563 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/FullUITestSuite/PositiveLogInTest-CH/logInTest/155734348 SecureAreaPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WPr/logInTest/155859488 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WPr/logInTest/155900582 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WPr/logInTest/155901489 SecureAreaPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WoPr/logInTest/155907322 WelcomePage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WoPr/logInTest/155908149 LoginPage opened.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230327/PositiveLogInTestSuite/PositiveLogInTest-WoPr/logInTest/155909210 SecureAreaPage opened.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
