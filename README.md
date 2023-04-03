@@ -1,7 +1,6 @@
 # Selenium-Tutorial-Demo
-Following course https://www.udemy.com/course/advanced-selenium-webdriver/
-
-# Project structure
+Following **Udemy** course [https://www.udemy.com/course/advanced-selenium-webdriver/](https://www.udemy.com/course/advanced-selenium-webdriver/). Project contains some additional features, described in this file.
+## Project structure
 **P**age **O**bject **M**odel design pattern is used to reduce test duplication and enable easier maintenance.  enhancing test maintenance and reducing code duplication. An object-oriented class is created for every page of the application under test (AUT) that serves as an interface to each page. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change. Subsequently, all changes to support that new UI are located in one place.
 
 Package **base** in the Sources Root folder (/src/main/java folder marked as sources root by Maven) contains classes with methods that are called several times for testing multiple different pages. It contains following classes:
@@ -11,14 +10,16 @@ Package **base** in the Sources Root folder (/src/main/java folder marked as sou
    4. **TestUtilities.java** is the parent class of all test classes in Test Sources Root directory (/src/test/java directory). It extends **BaseTest.java** and has some additional methods for getting browser logs, creating data provider and so on.
 
 - Package **pages** contains all classes that represent a page from the application under test. Class **BasePageObject.java** is the parent class for pages classes. Contains variables and methods used on multiple pages. 
+- Package **com.herokuapp.theinternet** located in the Test Sources Root directory (/src/test/java) contains all the test classes with corresponding test methods.
+- Test Resources Root directory (/src/test/resources) contains **TestSuites** directory where all the **xml** files containing test suites are stored. We use these files to execute tests from specific test classes while passing specific parameters and potentially using listeners.
 
-# Running tests on Selenium Grid
-For this purpose a method is added to the base class **BrowserDriverFactory** used for creating corresponding RemoteWebDriver instance. Capabilities and optins for this instance vary depending on the browser parameter passed in the test suite .xml file.
+## Running tests on Selenium Grid
+For this purpose a method is added to the base class **BrowserDriverFactory** used for creating corresponding RemoteWebDriver instance. Capabilities and options for this instance vary depending on the browser parameter passed in the test suite .xml file.
 
 - **com.herokuapp.theinternet.base.BrowserDriverFactory.java** contains method **createDriverGrid** that provides corresponding WebDriver instance.
 - Class **com.herokuapp.theinternet.PositiveTests.java** in Test Sources Root directory which extends **com.herokuapp.theinternet.base.BaseTest.java** class in Sources Root directory
 
-# Generating reports using **ExtentReporterNG** 
+## Generating reports using **ExtentReporterNG** 
  - Detailed explanation can be found here [https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/](https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/).
  - Suitable dependencies are added:
 ```  <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
@@ -36,3 +37,10 @@ For this purpose a method is added to the base class **BrowserDriverFactory** us
 ```
    When we run **SmokeTestSuite.xml** file, an ExtentReports HTML report is created in the default test-output folder.
    ![Generated report using ExtentReport TestNG listener, after running SmoteTestSuite.xml](src/main/resources/readmeImg/ExtentReports.png)
+   ## Generating emailable-reports
+- From project tree select the test class or test suite you want to run and generate HTML report for. From menu **Run** select **Edit configurations...**.
+  ![Select AlertsTestSuite.xml and choose edit configurations from run menu](src/main/resources/readmeImg/generateEmailableReport.png)
+- In the Listeners tab add emailable report (click **+** icon and start writing emailable, you will be offered two options and you can pick any of them).
+![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReport.png)
+- Example for generater report:
+![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReportExample.png)

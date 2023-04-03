@@ -2,10 +2,7 @@ package com.herokuapp.theinternet.uploadtests;
 
 import com.herokuapp.theinternet.base.TestUtilities;
 import com.herokuapp.theinternet.pages.FileUploaderPage;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class UploadTests extends TestUtilities {
@@ -18,13 +15,10 @@ public class UploadTests extends TestUtilities {
         fileUploaderPage.openPage();
         // Select file
         fileUploaderPage.selectFile(fileName);
-
         // Push upload button
         fileUploaderPage.pushUploadButton();
-
         // Get uploaded files
         String fileNames = fileUploaderPage.getUploadedFilesNames();
-
         // Verify selected file uploaded
         Assert.assertTrue(fileNames.contains(fileName),
                 "Our file (" + fileName + ") is not one of the uploaded (" + fileNames + ")");
