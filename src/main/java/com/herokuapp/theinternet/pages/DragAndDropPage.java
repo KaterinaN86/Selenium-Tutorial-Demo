@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class DragAndDropPage extends BasePageObject{
     private String pageUrl = "http://the-internet.herokuapp.com/drag_and_drop";
-
     private By columnA = By.id("column-a");
     private By columnB = By.id("column-b");
 

@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+//Parent class for pages classes. Contains variables and methods used on multiple pages.
 public class BasePageObject {
 
     protected WebDriver driver;
