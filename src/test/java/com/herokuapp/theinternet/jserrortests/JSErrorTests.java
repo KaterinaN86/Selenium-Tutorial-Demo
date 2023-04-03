@@ -11,7 +11,6 @@ import java.util.List;
 public class JSErrorTests extends TestUtilities {
     @Test
     public void jsErrorTest() {
-        log.info("Starting jsErrorTest");
         SoftAssert softAssert = new SoftAssert();
 
         // Open JSErrorPage

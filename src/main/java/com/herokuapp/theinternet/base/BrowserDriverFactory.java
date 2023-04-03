@@ -114,12 +114,6 @@ public class BrowserDriverFactory {
         return driver;
     }
 
-    public WebDriver createRemoteFirefox() {
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        WebDriver driver = new RemoteWebDriver(firefoxOptions);
-        return driver;
-    }
-
     /**
      * Method used for creating RemoteWebDriver instance used for performing tests on SeleniumGrid. Depending on browser variable value certain instance is created with corresponding capabilities and options.
      *

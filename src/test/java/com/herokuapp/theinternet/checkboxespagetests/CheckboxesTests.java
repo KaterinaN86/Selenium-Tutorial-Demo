@@ -10,7 +10,6 @@ public class CheckboxesTests extends TestUtilities {
 
     @Test
     public void selectingTwoCheckboxesTest() {
-
         // open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();

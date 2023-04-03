@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 public class DragAndDropTests extends TestUtilities {
     @Test
     public void dragAToBTest() {
-        log.info("Starting dragAToBTest");
-
+        //Commented out because TestNg Listener is implemented in order to log this data.
+        //log.info("Starting dragAToBTest");
         // Open DragAndDropPage
         DragAndDropPage dragAndDropPage = new DragAndDropPage(driver, log);
         dragAndDropPage.openPage();

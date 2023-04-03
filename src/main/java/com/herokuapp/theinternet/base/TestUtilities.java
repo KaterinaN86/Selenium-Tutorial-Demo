@@ -21,7 +21,6 @@ public class TestUtilities extends BaseTest {
                 {1, "index.html"}, {2, "logo.png"}, {3, "text.txt"}
         };
     }
-
     static String getTodaysDate() {
         return new SimpleDateFormat("yyyMMdd").format(new Date());
     }
@@ -57,5 +56,4 @@ public class TestUtilities extends BaseTest {
         List<LogEntry> logList = log.getAll();
         return logList;
     }
-
 }

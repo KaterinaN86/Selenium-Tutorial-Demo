@@ -13,6 +13,7 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 
+//Used for logging data for every test, contains takeScreenshot method.
 public class TestListener implements ITestListener {
     Logger log;
     String testName;

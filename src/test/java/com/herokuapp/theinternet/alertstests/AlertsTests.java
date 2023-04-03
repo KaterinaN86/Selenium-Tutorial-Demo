@@ -12,8 +12,6 @@ public class AlertsTests extends TestUtilities {
 
     @Test
     public void jsAlertTest() {
-        log.info("Starting jsAlertTest");
-
         // open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
         welcomePage.openPage();

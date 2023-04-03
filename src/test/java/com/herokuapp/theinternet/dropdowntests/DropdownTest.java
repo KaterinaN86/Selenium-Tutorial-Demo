@@ -11,7 +11,8 @@ public class DropdownTest extends TestUtilities {
 
     @Test
     public void optionTwoTest() {
-        log.info("Starting optionTwoTest");
+        //Commented out because TestNg Listener is implemented in order to log this data.
+        //log.info("Starting optionTwoTest");
 
         // open main page
         WelcomePage welcomePage = new WelcomePage(driver, log);
