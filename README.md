@@ -13,8 +13,8 @@ In this demo project, class **io.github.bonigarcia.wdm.WebDriverManager** is ins
 </dependency>
 ```
 This approach doesn't require downloading specific browser drivers, driver instance is created by calling corresponding constructor, for example:\
-`WebDriver driver = new FirefoxDriver();`\
-- **Note**: After Chrome browser 1.1.0 and ChromeDriver update there is forbidden access issue. Adding argument **--remote-allow-origins=*** to the options object is necessary for chromeDriver to work. Example:
+`WebDriver driver = new FirefoxDriver();`
+- **Note**: After Chrome browser 1.1.0 and ChromeDriver update there is forbidden access issue. Adding argument **"--remote-allow-origins=*"** to the options object is necessary for chromeDriver to work. Example:
 ```
  WebDriverManager.chromedriver().setup();              
  chromeOptions.addArguments("--remote-allow-origins=*");
