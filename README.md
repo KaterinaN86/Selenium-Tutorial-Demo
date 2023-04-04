@@ -16,8 +16,8 @@ Package **base** in the Sources Root folder (/src/main/java folder marked as sou
 ## Running tests on Selenium Grid
 - Setting up Selenium Grid is the first step. For tests in this project two grids are used because of configuration issues regarding MicrosoftEdge browser. Docker images for Selenium Grid hub with ip `http://40.114.204.255` on port `4444` and three nodes for browsers Chrome, Firefox and MS Edge are pulled and grid is set up using **docker-compose.yml** file. Examples can be found here: [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium). Second grid is set up using docker image for **selenium/standalone-edge**.
  1. Pull the image using Docker command: `docker pull selenium/standalone-edge`. This will allow you to control a MicrosoftEdge browser instance running inside a container.
- 2. Use the following Docker command to create a container with the image you have just pulled:
-```docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-edge```.
+ 2. Use the following Docker command to create a container with the image you have just pulled:\
+```docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-edge```.\
 With this command it is specified that the Docker container will run in detached mode. After specifying the mode, container’s ports 4444 and 7900 are mapped to machine’s ports 4444 and 7900, respectively. You will be able to control a MS Edge browser instance by pointing tests to the URL http://localhost:4444 (corresponding IP address can be used instead of localhost) and see what is happening in your container by visiting the URL http://localhost:7900 (The password is secret). Lastly, shared memory size needs to be set to 2g because a container running a selenium/standalone-edge image requires more shared memory than the default 64M that Docker containers have allocated.
  3. To see Docker container ID use command: 'docker ps'.
  4. Container's ID can be used to stop or run created container when needed: `docker start 81bd6ece5943` or `docker stop 81bd6ece5943` (replace example value for ID with corresponding).
