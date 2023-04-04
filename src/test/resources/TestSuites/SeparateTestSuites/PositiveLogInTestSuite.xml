@@ -13,6 +13,4 @@
 			<class name="com.herokuapp.theinternet.loginpagetests.PositiveLogInTests" />
 		</classes>
 	</test>
-
-
 </suite>

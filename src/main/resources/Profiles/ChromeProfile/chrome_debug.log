@@ -1,3 +1,3 @@
-[28796:26104:0327/155856.913:WARNING:chrome_main_delegate.cc(618)] This is Chrome version 111.0.5563.111 (not a warning)
-[28796:26104:0327/155900.244:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: http://the-internet.herokuapp.com/login (0)
-[28796:26104:0327/155901.813:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[34104:13928:0403/213404.693:WARNING:chrome_main_delegate.cc(618)] This is Chrome version 111.0.5563.147 (not a warning)
+[34104:13928:0403/213407.612:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: http://the-internet.herokuapp.com/login (0)
+[34104:13928:0403/213409.580:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

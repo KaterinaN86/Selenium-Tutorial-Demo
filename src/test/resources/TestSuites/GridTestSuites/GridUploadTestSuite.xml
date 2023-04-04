@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="UploadTestSuite" verbose="1" parallel="tests" thread-count="4">
+	<parameter name="environment" value="grid"></parameter>
+	<parameter name="enableFileUpload" value="true"></parameter>
+	<test name="UploadTests CH">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="ip" value="40.114.204.255:4444"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.uploadtests.UploadTests" />
+		</classes>
+	</test>
+	<test name="UploadTests FF">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="ip" value="40.114.204.255:4444"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.uploadtests.UploadTests" />
+		</classes>
+	</test>
+	<test name="UploadTests MSEdge">
+		<parameter name="browser" value="microsoftedge"></parameter>
+		<parameter name="ip" value="192.168.1.111:4444"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.uploadtests.UploadTests" />
+		</classes>
+	</test>
+</suite>

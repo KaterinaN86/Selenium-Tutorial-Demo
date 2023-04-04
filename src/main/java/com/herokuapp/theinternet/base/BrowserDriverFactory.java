@@ -120,13 +120,14 @@ public class BrowserDriverFactory {
      * @return WebDriver instance
      */
     public WebDriver createDriverGrid(String enableFileUpload, String hubUrl) {
-        hubUrl="http://".concat(hubUrl).concat("/wd/hub");
+        hubUrl = "http://".concat(hubUrl).concat("/wd/hub");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
         log.info("Starting " + browser + " on grid");
         // Creating driver
         if (browser.equals("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.setCapability("platform", "Linux");
             chromeOptions.addArguments("--remote-allow-origins=*");
             chromeOptions.merge(capabilities);
             try {
@@ -155,7 +156,7 @@ public class BrowserDriverFactory {
                 e.printStackTrace();
             }
         }
-      //Used to enable file upload tests on Selenium Grid.
+        //Used to enable file upload tests on Selenium Grid.
         if (enableFileUpload.equals("true")) {
             ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
         }
