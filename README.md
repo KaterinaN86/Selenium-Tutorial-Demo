@@ -48,6 +48,8 @@ To run tests remotely only test parameters need to be changed in order for the c
 ### Running tests on Selenium Grid using test suite **.xml** files
 Test Suites for remote testing are located in directory **src\test\resources\TestSuites\GridTestSuites**. Parameters **environment**, **browser** and **ip** need to be defined in order to run tests remotely.
 - **Note**: When testing file upload tests additional parameter **enableFileUpload** is passed with value "true". This parameter is used in method **createDriverGrid** of **BrowserDriverFactory.java** class in order to detect files on the local disk: ` ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());`.
+### Running Selenium Grid tests with Jenkins
+
 
 ## Generating reports using **ExtentReporterNG** 
  - Detailed explanation can be found here [https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/](https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/).
@@ -65,16 +67,12 @@ Test Suites for remote testing are located in directory **src\test\resources\Tes
         <listener class-name="com.herokuapp.theinternet.base.ExtentReporterNG"></listener>
     </listeners>
 ```
-   When we run **SmokeTestSuite.xml** file, an ExtentReports HTML report is created in the default test-output folder.
----
+When we run **SmokeTestSuite.xml** file, an ExtentReports HTML report is created in the default test-output folder.\
    ![Generated report using ExtentReport TestNG listener, after running SmoteTestSuite.xml](src/main/resources/readmeImg/ExtentReports.png)
-   ## Generating emailable-reports
-- From project tree select the test class or test suite you want to run and generate HTML report for. From menu **Run** select **Edit configurations...**.
----
+## Generating emailable-reports
+- From project tree select the test class or test suite you want to run and generate HTML report for. From menu **Run** select **Edit configurations...**.\
   ![Select AlertsTestSuite.xml and choose edit configurations from run menu](src/main/resources/readmeImg/generateEmailableReport.png)
-- In the Listeners tab add emailable report (click **+** icon and start writing emailable, you will be offered two options and you can pick any of them).
----
+- In the Listeners tab add emailable report (click **+** icon and start writing emailable, you will be offered two options and you can pick any of them).\
 ![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReport.png)
----
 - Example for generater report:
 ![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReportExample.png)
