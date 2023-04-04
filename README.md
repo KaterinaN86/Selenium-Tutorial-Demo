@@ -1,5 +1,25 @@
 # Selenium-Tutorial-Demo
 Following **Udemy** course [https://www.udemy.com/course/advanced-selenium-webdriver/](https://www.udemy.com/course/advanced-selenium-webdriver/). Project contains some additional features, described in this file.
+## Using **WebDriverManager**
+In the Udemy tutorial ** org.openqa.selenium.WebDriver** instance is used to run tests with Selenium. Path to drivers for all browsers used by Selenium needs to be defined using command like:\
+`System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");`.\
+Drivers also have to be up-to-date with corresponding browser version and corret versions need to be regularly downloaded.
+In this demo project, class **io.github.bonigarcia.wdm.WebDriverManager** is instantiated to define **driver** variable. Corresponding Maven dependecy is added to **pom.xml** file:
+``` 
+<dependency>
+<groupId>io.github.bonigarcia</groupId>
+<artifactId>webdrivermanager</artifactId>
+<version>5.3.2</version>
+</dependency>
+```
+This approach doesn't require downloading specific browser drivers, driver instance is created by calling corresponding constructor, for example:\
+`WebDriver driver = new FirefoxDriver();`\
+- **Note**: After Chrome browser 1.1.0 and ChromeDriver update there is forbidden access issue. Adding argument **--remote-allow-origins=*** to the options object is necessary for chromeDriver to work. Example:
+```
+ WebDriverManager.chromedriver().setup();              
+ chromeOptions.addArguments("--remote-allow-origins=*");
+ driver = new ChromeDriver(chromeOptions);
+```
 ## Project structure
 **P**age **O**bject **M**odel design pattern is used to reduce test duplication and enable easier maintenance.  enhancing test maintenance and reducing code duplication. An object-oriented class is created for every page of the application under test (AUT) that serves as an interface to each page. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change. Subsequently, all changes to support that new UI are located in one place.
 

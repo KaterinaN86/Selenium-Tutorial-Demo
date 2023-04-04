@@ -48,7 +48,6 @@ public class BrowserDriverFactory {
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
-                //WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
             case "chromeheadless":
