@@ -95,7 +95,10 @@ pipeline{
 }
 ```
 - **Note**: In example pipeline, **SureFire Report** html file is generated in the post stage if other stages completed successfully. To generate report, two plugins have been added to **pom.xml** file: maven-site-plugin and maven-project-info-reports-plugin. In stage **Build** `site surefire-report:report` is also added to maven command. To display report CSS following plugins have been installed: [https://wiki.jenkins-ci.org/display/JENKINS/Startup+Trigger] (https://wiki.jenkins-ci.org/display/JENKINS/Startup+Trigger) and [https://wiki.jenkins-ci.org/display/JENKINS/Groovy+plugin] (https://wiki.jenkins-ci.org/display/JENKINS/Groovy+plugin). Then a freestyle job is created that starts on Jenkins restart:
-  ![Settings for freestyle job to enable CSS on surefire report](src/main/resources/readmeImg/buildOnStart.jpg) and the following groovy script is added in the **Groovy command** field of the **execute system Groovy script** section (**Build Steps** segment): 
+
+  ![Settings for freestyle job to enable CSS on surefire report](src/main/resources/readmeImg/buildOnStart.jpg)
+
+and the following groovy script is added in the **Groovy command** field of the **execute system Groovy script** section (**Build Steps** segment): 
 ```
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *")
 ```
