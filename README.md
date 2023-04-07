@@ -137,34 +137,3 @@ and the following groovy script is added in the **Groovy command** field of the 
 ```
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *")
 ```
-## Generating reports using **ExtentReporterNG** 
- - Detailed explanation can be found here [https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/](https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/).
- - Suitable dependencies are added:
-```  <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
-        <dependency>
-            <groupId>com.relevantcodes</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>2.41.2</version>
-        </dependency>
-  ```      
- - Class **ExtentReporterNG.java** implements IReporter interface. In this class, method **generateReport** is overridden in order to generate report. Created listener for generating extent report is used in **SmokeTestSuite**:
-```
- <listeners>
-        <listener class-name="com.herokuapp.theinternet.base.ExtentReporterNG"></listener>
-    </listeners>
-```
-- When we run **SmokeTestSuite.xml** file, an ExtentReports HTML report is created in the default test-output folder.
-
-   ![Generated report using ExtentReport TestNG listener, after running SmoteTestSuite.xml](src/main/resources/readmeImg/ExtentReports.png)
-
-## Generating emailable-reports
-- From project tree select the test class or test suite you want to run and generate HTML report for. From menu **Run** select **Edit configurations...**.
-
-  ![Select AlertsTestSuite.xml and choose edit configurations from run menu](src/main/resources/readmeImg/generateEmailableReport.png)
-
-- In the Listeners tab add emailable report (click **+** icon and start writing emailable, you will be offered two options and you can pick any of them).
-
-![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReport.png)
-
-- Example for generater report:
-![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReportExample.png)
