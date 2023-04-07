@@ -48,6 +48,24 @@ To run tests remotely only test parameters need to be changed in order for the c
 ### Running tests on Selenium Grid using test suite **.xml** files
 Test Suites for remote testing are located in directory **src\test\resources\TestSuites\GridTestSuites**. Parameters **environment**, **browser** and **ip** need to be defined in order to run tests remotely.
 - **Note**: When testing file upload tests additional parameter **enableFileUpload** is passed with value "true". This parameter is used in method **createDriverGrid** of **BrowserDriverFactory.java** class in order to detect files on the local disk: ` ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());`.
+### Running Selenium Grid tests from command line
+Inbuilt terminal in InteliJ can be used for this purpose. Also, default tests suite file is specified in **pom.xml** file. Any test suite can be used as default, simply swap **DragAndDropTestSuite** for name of desired suite.
+```
+ <!-- Specifying Default suite files if not being specified from mvn command line -->
+        <smokeSuiteFile>src\test\resources\TestSuites\SeparateTestSuites\DragAndDropTestSuite.xml</smokeSuiteFile>
+        <!-- Default suite files if not being specified from mvn command line -->
+        <defaultSuiteFiles>${smokeSuiteFile}</defaultSuiteFiles>
+        <suiteFile>${defaultSuiteFiles}</suiteFile>
+```
+To execute test maven command similar to the following can be used:
+```
+ mvn clean test -U -X -DsuiteFile='src\test\resources\TestSuites\SeparateTestSuites\HoversTestSuite.xml' -Dbrowser=chrome -Denvironment=grid -Dip='40.114.204.255:4444'
+```
+Values for necessary parameters **browser**, **environment** and **ip** need to be specified for test to be executed on previously configured grid.
+- **Note**: When running file upload tests on Selenium grid, value for parameter **enableFileUpload** needs to be set to "true":
+```
+mvn clean test -DsuiteFile='src\test\resources\TestSuites\GridTestSuites\GridTestSuiteEdge.xml' -Dbrowser=microsoftedge -Denvironment=grid -Dip='192.168.1.111:4444' -DenableFileUpload=true
+```
 ### Running Selenium Grid tests with Jenkins
 
 
