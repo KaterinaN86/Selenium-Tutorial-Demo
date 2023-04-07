@@ -63,13 +63,13 @@ To execute test maven command similar to the following can be used:
 ```
 Values for necessary parameters **browser**, **environment** and **ip** need to be specified for test to be executed on previously configured grid.
 - **Note**: When running file upload tests on Selenium grid, value for parameter **enableFileUpload** needs to be set to "true":
-```aidl
+```
 mvn clean test -DsuiteFile='src\test\resources\TestSuites\GridTestSuites\GridTestSuiteEdge.xml' -Dbrowser=microsoftedge -Denvironment=grid -Dip='192.168.1.111:4444' -DenableFileUpload=true
 ```
 ### Running Selenium Grid tests with Jenkins
 First step is to add **Maven Integration Plugin** form the list of available plugins in **Manage Plugins** section of **Manage Jenkins** window. Once plugin is installed and active, in the **Global Tool Configuration** window we can add **Maven Installation** by selecting **Install automatically** and choosing specific version to install from Apache. 
 After that, new pipeline job can be created and a script similar to the following can be used to run tests:
-```aidl
+```
 pipeline{
     agent any    
     tools{       
