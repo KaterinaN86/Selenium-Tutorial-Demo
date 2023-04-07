@@ -33,6 +33,39 @@ Package **base** in the Sources Root folder (/src/main/java folder marked as sou
 - Package **com.herokuapp.theinternet** located in the Test Sources Root directory (/src/test/java) contains all the test classes with corresponding test methods.
 - Test Resources Root directory (/src/test/resources) contains **TestSuites** directory where all the **xml** files containing test suites are stored. We use these files to execute tests from specific test classes while passing specific parameters and potentially using listeners.
 
+## Generating reports using **ExtentReporterNG**
+- Detailed explanation can be found here [https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/](https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/).
+- Suitable dependencies are added:
+```  <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+  ```      
+- Class **ExtentReporterNG.java** implements IReporter interface. In this class, method **generateReport** is overridden in order to generate report. Created listener for generating extent report is used in **SmokeTestSuite**:
+```
+ <listeners>
+        <listener class-name="com.herokuapp.theinternet.base.ExtentReporterNG"></listener>
+    </listeners>
+```
+- When we run **SmokeTestSuite.xml** file, an ExtentReports HTML report is created in the default test-output folder.
+
+  ![Generated report using ExtentReport TestNG listener, after running SmoteTestSuite.xml](src/main/resources/readmeImg/ExtentReports.png)
+
+## Generating emailable-reports
+- From project tree select the test class or test suite you want to run and generate HTML report for. From menu **Run** select **Edit configurations...**.
+
+  ![Select AlertsTestSuite.xml and choose edit configurations from run menu](src/main/resources/readmeImg/generateEmailableReport.png)
+
+- In the Listeners tab add emailable report (click **+** icon and start writing emailable, you will be offered two options and you can pick any of them).
+
+![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReport.png)
+
+- Example for generater report:
+
+  ![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReportExample.png)
+
 ## Running tests on Selenium Grid
 - Setting up Selenium Grid is the first step. For tests in this project two grids are used because of configuration issues regarding MicrosoftEdge browser. Docker images for Selenium Grid hub with ip `http://40.114.204.255` on port `4444` and three nodes for browsers Chrome, Firefox and MS Edge are pulled and grid is set up using **docker-compose.yml** file. Examples can be found here: [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium). Second grid is set up using docker image for **selenium/standalone-edge**.
  1. Pull the image using Docker command: `docker pull selenium/standalone-edge`. This will allow you to control a MicrosoftEdge browser instance running inside a container.
