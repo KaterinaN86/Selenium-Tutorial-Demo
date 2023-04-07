@@ -1,7 +1,7 @@
 # Selenium-Tutorial-Demo
 Following **Udemy** course [https://www.udemy.com/course/advanced-selenium-webdriver/](https://www.udemy.com/course/advanced-selenium-webdriver/). Project contains some additional features, described in this file.
 ## Using **WebDriverManager**
-In the Udemy tutorial ** org.openqa.selenium.WebDriver** instance is used to run tests with Selenium. Path to drivers for all browsers used by Selenium needs to be defined using command like:\
+In Udemy tutorial **org.openqa.selenium.WebDriver** instance is used to run tests with Selenium. Path to drivers for all browsers used by Selenium needs to be defined using command like:\
 `System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");`.\
 Drivers also have to be up-to-date with corresponding browser version and corret versions need to be regularly downloaded.
 In this demo project, class **io.github.bonigarcia.wdm.WebDriverManager** is instantiated to define **driver** variable. Corresponding Maven dependecy is added to **pom.xml** file:
