@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/JSErrorTestSuite/JSErrorTests/jsErrorTest/220215076 jsErrorTest.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/JSErrorTests/jsErrorTest/215907909 jsErrorTest.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215830339 WelcomePage opened.png" beforeDir="false" />
