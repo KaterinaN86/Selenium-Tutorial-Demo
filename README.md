@@ -63,12 +63,38 @@ To execute test maven command similar to the following can be used:
 ```
 Values for necessary parameters **browser**, **environment** and **ip** need to be specified for test to be executed on previously configured grid.
 - **Note**: When running file upload tests on Selenium grid, value for parameter **enableFileUpload** needs to be set to "true":
-```
+```aidl
 mvn clean test -DsuiteFile='src\test\resources\TestSuites\GridTestSuites\GridTestSuiteEdge.xml' -Dbrowser=microsoftedge -Denvironment=grid -Dip='192.168.1.111:4444' -DenableFileUpload=true
 ```
 ### Running Selenium Grid tests with Jenkins
-
-
+First step is to add **Maven Integration Plugin** form the list of available plugins in **Manage Plugins** section of **Manage Jenkins** window. Once plugin is installed and active, in the **Global Tool Configuration** window we can add **Maven Installation** by selecting **Install automatically** and choosing specific version to install from Apache. 
+After that, new pipeline job can be created and a script similar to the following can be used to run tests:
+```aidl
+pipeline{
+    agent any    
+    tools{       
+        maven 'mvn_3.8.6'
+    }
+    stages{
+        stage ('checkout'){
+            steps{
+            checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'my_credentials', url: 'https://github.com/KaterinaN86/Selenium-Tutorial-Demo.git']])
+            }
+        }       
+            stage('Build') {
+                steps {
+                sh 'mvn clean test site surefire-report:report -U -X -DsuiteFile=src/test/resources/TestSuites/SeparateTestSuites/KeyPressesTestSuite.xml -Dbrowser=firefox -Denvironment=grid -Dip=40.114.204.255:4444'
+                }
+            }
+    }
+    post {
+        success {
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/site', reportFiles: 'surefire-report.html', reportName: 'Surefire Report', reportTitles: '', useWrapperFileDirectly: true])
+        }
+    }
+}
+```
+- **Note**: In example pipeline, **SureFire Report** html file is generated in the post stage if other stages completed successfully. To generate report, two plugins have been added to **pom.xml** file: maven-site-plugin and maven-project-info-reports-plugin. In stage **Build** `site surefire-report:report` is also added to maven command.
 ## Generating reports using **ExtentReporterNG** 
  - Detailed explanation can be found here [https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/](https://www.ontestautomation.com/using-the-extentreports-testng-listener-in-selenium-page-object-tests/).
  - Suitable dependencies are added:
