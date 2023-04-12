@@ -77,7 +77,10 @@ Path to directory where screenshots are saved is defined in **takeScreenshot** m
 
   ![Location of screenshots taken on test execution](src/main/resources/readmeImg/screenshotsLocation.png)
 
-- **Note**: Test suite can also be executed using Selenium Grid and expected screenshots will also be taken. Following command can be used for this purpose: `mvn clean test -DsuiteFile='src\test\resources\TestSuites\SeparateTestSuites\LoginScreenshotTestSuite.xml' -Dbrowser=chrome -Denvironment=grid -Dip='40.114.204.255:4444'`
+- **Note**: Test suite can also be executed using Selenium Grid and expected screenshots will also be taken. Following command can be used for this purpose:
+```
+mvn clean test -DsuiteFile='src\test\resources\TestSuites\SeparateTestSuites\LoginScreenshotTestSuite.xml' -Dbrowser=chrome -Denvironment=grid -Dip='40.114.204.255:4444'
+```
 
 ## Running tests on Selenium Grid
 - Setting up Selenium Grid is the first step. For tests in this project two grids are used because of configuration issues regarding MicrosoftEdge browser. Docker images for Selenium Grid hub with ip `http://40.114.204.255` on port `4444` and three nodes for browsers Chrome, Firefox and MS Edge are pulled and grid is set up using **docker-compose.yml** file. Examples can be found here: [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium). Second grid is set up using docker image for **selenium/standalone-edge**.
