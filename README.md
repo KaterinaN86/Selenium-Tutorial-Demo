@@ -66,6 +66,19 @@ Package **base** in the Sources Root folder (/src/main/java folder marked as sou
 
   ![Add listener for emailable report to AlertsTestSuite.xml](src/main/resources/readmeImg/emailableReportExample.png)
 
+## Taking screenshots on test failure
+Class **src\main\java\com\herokuapp\theinternet\base\TestListener.java** that implements TestNG listener **ITestListener** is used for this purpose. Method **takeScreenshot** is added to class and interface method **onTestFailure** is overridden, so it calls **takeScreenshot** method on test failure.
+To demonstrate screenshot on failure test suite **src\test\resources\TestSuites\SeparateTestSuites\LogInScreenshotTestSuite.xml** is created. Suite contains three tests:
+- **PositiveLogInTest-CH** executed in Chrome browser that performs login with valid data by calling **logInTest** method from **PositiveLogInTests.java** test class.
+- **NegativeUsernameTest-FF** executed in Firefox browser that performs login using invalid data by calling **negativeTest** method from test class **NegativeLogInTests.java**. Generated error message matches expected so this test will pass.
+- **NegativePasswordTest-CH** executed in Chrome browser that performs login using invalid data by calling **negativeTest** method from test class **NegativeLogInTests.java**. Generated error message doesn't match expected so this test will fail.
+Screenshots are taken on login with valid data by calling **TestUtilities.java** base class method **takeScreenshot** when **Welcome Page**, **Login Page** and **Secure Area Page** are opened. Screenshot on test fail is also taken when **NegativePasswordTest-CH** is executed. 
+Path to directory where screenshots are saved is defined in **takeScreenshot** methods correspondingly. Example:
+
+  ![Location of screenshots taken on test execution](src/main/resources/readmeImg/screenshotsLocation.png)
+
+- **Note**: Test suite can also be executed using Selenium Grid and expected screenshots will also be taken. Following command can be used for this purpose: `mvn clean test -DsuiteFile='src\test\resources\TestSuites\SeparateTestSuites\LoginScreenshotTestSuite.xml' -Dbrowser=chrome -Denvironment=grid -Dip='40.114.204.255:4444'`
+
 ## Running tests on Selenium Grid
 - Setting up Selenium Grid is the first step. For tests in this project two grids are used because of configuration issues regarding MicrosoftEdge browser. Docker images for Selenium Grid hub with ip `http://40.114.204.255` on port `4444` and three nodes for browsers Chrome, Firefox and MS Edge are pulled and grid is set up using **docker-compose.yml** file. Examples can be found here: [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium). Second grid is set up using docker image for **selenium/standalone-edge**.
  1. Pull the image using Docker command: `docker pull selenium/standalone-edge`. This will allow you to control a MicrosoftEdge browser instance running inside a container.
