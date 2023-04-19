@@ -23,44 +23,64 @@ public class BasePageObject {
         this.log = log;
     }
 
-    /** Open page with given URL */
+    /**
+     * Open page with given URL
+     */
     protected void openUrl(String url) {
         driver.get(url);
     }
 
-    /** Find element using given locator */
+    /**
+     * Find element using given locator
+     */
     protected WebElement find(By locator) {
         return driver.findElement(locator);
     }
 
-    /** Find all elements using given locator */
+    /**
+     * Find all elements using given locator
+     */
     protected List<WebElement> findAll(By locator) {
         return driver.findElements(locator);
     }
 
-    /** Click on element with given locator when its visible */
+    /**
+     * Click on element with given locator when its visible
+     */
     protected void click(By locator) {
         waitForVisibilityOf(locator, Duration.ofSeconds(5));
         find(locator).click();
     }
 
-    /** Type given text into element with given locator */
+    /**
+     * Type given text into element with given locator
+     */
     protected void type(String text, By locator) {
-        waitForVisibilityOf(locator, Duration.ofSeconds(5));
+        try {
+            waitForVisibilityOf(locator, Duration.ofSeconds(5));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
         find(locator).sendKeys(text);
     }
 
-    /** Get URL of current page from browser */
+    /**
+     * Get URL of current page from browser
+     */
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
 
-    /** Get title of current page */
+    /**
+     * Get title of current page
+     */
     public String getCurrentPageTitle() {
         return driver.getTitle();
     }
 
-    /** Get source of current page */
+    /**
+     * Get source of current page
+     */
     public String getCurrentPageSource() {
         return driver.getPageSource();
     }
@@ -91,7 +111,9 @@ public class BasePageObject {
         }
     }
 
-    /** Wait for alert present and then switch to it */
+    /**
+     * Wait for alert present and then switch to it
+     */
     protected Alert switchToAlert() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.alertIsPresent());
@@ -119,31 +141,41 @@ public class BasePageObject {
         }
     }
 
-    /** Switch to iFrame using it's locator */
+    /**
+     * Switch to iFrame using it's locator
+     */
     protected void switchToFrame(By frameLocator) {
         driver.switchTo().frame(find(frameLocator));
     }
 
-    /** Press Key on locator */
+    /**
+     * Press Key on locator
+     */
     protected void pressKey(By locator, Keys key) {
         find(locator).sendKeys(key);
     }
 
-    /** Press Key using Actions class */
+    /**
+     * Press Key using Actions class
+     */
     public void pressKeyWithActions(Keys key) {
         log.info("Pressing " + key.name() + " using Actions class");
         Actions action = new Actions(driver);
         action.sendKeys(key).build().perform();
     }
 
-    /** Perform scroll to the bottom */
+    /**
+     * Perform scroll to the bottom
+     */
     public void scrollToBottom() {
         log.info("Scrolling to the bottom of the page");
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 
-    /** Drag 'from' element to 'to' element */
+    /**
+     * Drag 'from' element to 'to' element
+     */
     protected void performDragAndDrop(By from, By to) {
         // Actions action = new Actions(driver);
         // action.dragAndDrop(find(from), find(to)).build().perform();
@@ -169,19 +201,26 @@ public class BasePageObject {
                 find(from), find(to));
     }
 
-    /** Perform mouse hover over element */
+    /**
+     * Perform mouse hover over element
+     */
     protected void hoverOverElement(WebElement element) {
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
     }
-    /** Add cookie */
+
+    /**
+     * Add cookie
+     */
     public void setCookie(Cookie ck) {
         log.info("Adding cookie " + ck.getName());
         driver.manage().addCookie(ck);
         log.info("Cookie added");
     }
 
-    /** Get cookie value using cookie name */
+    /**
+     * Get cookie value using cookie name
+     */
     public String getCookie(String name) {
         log.info("Getting value of cookie " + name);
         return driver.manage().getCookieNamed(name).getValue();

@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4395ff92-3056-4ea4-96ba-f9f051b774d3" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/readmeImg/screenshotsLocation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/TestSuites/SeparateTestSuites/LogInScreenshotTestSuite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230412/LoginScreenshotTestSuite/NegativePasswordTest-CH/negativeTest/143750744 negativeTest-failure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230412/LoginScreenshotTestSuite/PositiveLogInTest-CH/logInTest/143738807 WelcomePage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-CH/logInTest/153108574 WelcomePage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-CH/logInTest/153110361 LoginPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-CH/logInTest/153112546 SecureAreaPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-CH/logInTest/153224573 WelcomePage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-CH/logInTest/153226359 LoginPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-CH/logInTest/153228952 SecureAreaPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-FF/logInTest/153112938 WelcomePage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-FF/logInTest/153114326 LoginPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-FF/logInTest/153116306 SecureAreaPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-FF/logInTest/153227593 WelcomePage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-FF/logInTest/153229208 LoginPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-FF/logInTest/153231593 SecureAreaPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-MSEdge/logInTest/153230386 WelcomePage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-MSEdge/logInTest/153232933 LoginPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/PositiveLogInTestSuite/PositiveLogInTest-MSEdge/logInTest/153235333 SecureAreaPage opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/screenshots/20230419/RemoteSmokeTestSuite/NegativeLoginTest-CH/negativeTest/153300375 negativeTest-failure.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/TestUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/TestUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/loginpagetests/NegativeLogInTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/herokuapp/theinternet/loginpagetests/NegativeLogInTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/base/BrowserDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/pages/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/herokuapp/theinternet/pages/BasePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/ExtentReportTestNG.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/ExtentReportTestNG.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/JSErrorTestSuite/JSErrorTests/jsErrorTest/220215076 jsErrorTest.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/JSErrorTests/jsErrorTest/215907909 jsErrorTest.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/screenshots/20230322/SmokeTestSuite/PositiveLogInTest/logInTest/215830339 WelcomePage opened.png" beforeDir="false" />
@@ -85,7 +96,7 @@
       <recent name="com.herokuapp.theinternet.checkboxespagetests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/LogInScreenshotTestSuite.xml">
+  <component name="RunManager" selected="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridSmokeTestSuite.xml">
     <configuration name="C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridPositiveLogInTestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium_tutorial_project" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuites/GridTestSuites/GridPositiveLogInTestSuite.xml" />
@@ -145,10 +156,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridSmokeTestSuite.xml" />
+        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridPositiveLogInTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/LogInScreenshotTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridUploadTestSuite.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridPositiveLogInTestSuite.xml" />
-        <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/GridTestSuites/GridSmokeTestSuite.xml" />
         <item itemvalue="TestNG.C:/java/selenium_tutorial_project/src/test/resources/TestSuites/SeparateTestSuites/GridSmokeTestSuite.xml" />
       </list>
     </recent_temporary>

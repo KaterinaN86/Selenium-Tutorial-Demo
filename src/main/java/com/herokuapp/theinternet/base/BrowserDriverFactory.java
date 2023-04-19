@@ -140,7 +140,6 @@ public class BrowserDriverFactory {
             EdgeOptions options = new EdgeOptions();
             //Following capabilities will vary depending on configuration of machine where SeleniumGrid is running.
             options.setCapability("platform", "Windows 10");
-            options.setCapability("browserVersion", "111.0");
             capabilities.setCapability("maxInstances", "1");
             options.merge(capabilities);
             try {
